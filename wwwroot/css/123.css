@@ -1,0 +1,1024 @@
+
+        body {
+            margin: 0;
+            font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+           
+        }
+
+        /*------------------------------------------------------------------------------------------- Navbar ----------------------------------------------------------------------------*/
+        #t_nav {
+            width: 100%;
+            padding-top: 1em;
+            height: 100px;
+            background-color: #f5f5f5;
+            margin-top: -20px;
+        }
+
+        #t_book,
+        #t_com {
+            font-size: x-large;
+            float: left;
+            margin-top: 35px;
+        }
+
+        #t_book {
+            color: rgb(116, 167, 234);
+            padding-left: 200px;
+        }
+
+        #t_com {
+            color: rgb(79, 149, 230);
+        }
+
+        #t_stay {
+            display: flex;
+            height: 30px;
+            margin: 0px;
+        }
+
+        #t_stay>a {
+            flex: 1;
+            margin-left: -10%;
+        }
+
+        #t_stay>a>p,
+        #t_ind>a>p {
+            color: white;
+            float: left;
+            margin: 10px 20px;
+        }
+
+        #t_ind {
+            display: flex;
+            padding-left: 500px;
+            margin-top: 20px;
+        }
+
+        #t_ind a {
+            text-decoration: none;
+            margin: 20px;
+
+        }
+
+        #t_btn1 {
+            color: white;
+            background-color: unset;
+            border: 1px solid white;
+            height: 33px;
+        }
+
+        #t_btn2,
+        #t_btn3 {
+            height: 33px;
+            color: rgb(17, 117, 184);
+        }
+
+        #t_btn {
+            background-color: unset;
+            color: white;
+            border: 2px solid rgb(37, 96, 185);
+            height: 50px;
+        }
+
+        /*--------------------------------------------------------------------------- Landing Page covid info, CSS ----------------------------------------------------------------------*/
+
+        .HomeImage img {
+            width: 100%;
+        }
+
+        .landing_covidInfo,
+        .landing_covidInfo_list_active {
+            background-color: #ffe08a30;
+        }
+
+        .landing_covidInfo>div {
+            margin: 0 14%;
+            height: 100%;
+        }
+
+        .landing_covidInfo_list {
+            width: 100%;
+            height: 100%;
+        }
+
+        .landing_covidInfo_accordion>div {
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0 1%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .landing_covidInfo_accordion {
+            padding: 10px 18px 0 0;
+            width: 100%;
+            font-size: 15px !important;
+            font-weight: 700;
+            transition: 0.4s;
+            display: flex;
+            border: 1px solid whitesmoke;
+            text-align: left;
+            outline: none;
+            color: #444;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .landing_covidInfo_accordion:hover {
+            background-color: white;
+        }
+
+        .landing_covidInfo_panel {
+            width: 100%;
+            font-size: 15px !important;
+            display: none;
+            overflow: hidden;
+        }
+
+        .landing_covidInfo_panel>a {
+            text-decoration: none;
+            color: #0071c2;
+            font-weight: 900;
+        }
+
+        .landing_covidInfo_panel>a:hover {
+            text-decoration: underline;
+        }
+
+        /*----------------------------------------------------------------------------- Landing search bar -------------------------------------------------------------------*/
+        #findDeals {
+            padding: 1.5% 0;
+            background-color: whitesmoke;
+            border-bottom: 2px solid whitesmoke;
+        }
+
+        #ss {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            background: #fff;
+            color: #333;
+            height: 52px;
+            border: 0;
+            border-radius: 2px;
+            display: table;
+            padding: 0 16px;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .t_search_lo {
+            height: 52px;
+            border: 4px solid rgb(247, 171, 7);
+            outline: none;
+            margin: -5px;
+            padding: 0px 40px;
+            font-size: 15px;
+        }
+
+        #t_sear_btn {
+            font-size: 15px;
+            height: 52px;
+            border: 4px solid rgb(247, 171, 7);
+            margin: 0px;
+            outline: none;
+            background-color: rgb(12, 105, 245);
+            color: white;
+            width: 100px;
+        }
+
+        #t_searchBar {
+            margin: 0 14%;
+            background-color: whitesmoke;
+        }
+
+        #t_sear_che {
+            margin-left: 14%;
+            padding-left: 10px;
+            height: 20px;
+            width: 25px;
+
+        }
+
+        #t_sear2 {
+            width: 100px;
+        }
+
+        /*------------------------------------------------------------------------ Landing connect with travellers -----------------------------------------------------------*/
+
+        #heading {
+            font-size: 24px;
+        }
+
+        #connect_travelers {
+            height: 30em;
+            margin: 0 14%;
+        }
+
+        .travelers_block {
+            display: flex;
+        }
+
+        .travelers_block>a {
+            width: 17em;
+            height: 24em;
+            margin-right: 1.5%;
+            line-height: 20%;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .travel_community>h4 {
+            margin-top: 1.5em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .travel_community>p {
+            color: #6b6b6b;
+        }
+
+        /*------------------------------------------------------------------------ Browse by property type, CSS -----------------------------------------------------------*/
+
+        .heading {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-top: -3%;
+            margin-bottom: 16px;
+            display: block;
+            margin-left: 14%;
+            color: #333;
+        }
+
+        li>div:nth-child(1)>img {
+            width: 210px;
+            height: 180px;
+        }
+
+        li>div:nth-child(2)>h3 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .carousel a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .carousel li>div:nth-child(2)>p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #6b6b6b;
+            display: block;
+            margin-top: -15px;
+        }
+
+        .carousel li {
+            padding-right: 16px;
+            display: list-item;
+        }
+
+        .carousel {
+            width: 81.5%;
+            height: 100%;
+        }
+
+        /*------------------------------------------------------------------------------- Mumbai, Delhi, Chennai, CSS ----------------------------------------------------------------------*/
+
+        #Mumbai_Delhi_Chennai {
+            height: 40vh;
+        }
+
+        #Mumbai_Delhi_Chennai>div {
+            height: 100%;
+            margin: 2% 14%;
+            display: flex;
+        }
+
+        .MDC_properties {
+            flex: 1;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            text-shadow: 1px 1px black;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .MDC_properties>div:nth-child(1) {
+            display: flex;
+            padding-left: 1em;
+            height: 15%;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .MDC_properties>div:nth-child(1)>div {
+            width: 0.1em;
+            height: 0.1em;
+            margin: 1.9em 1em;
+            padding: 0.8em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .MDC_properties>p {
+            margin: 17% 4%;
+            font-size: 18px;
+            font-weight: 700;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .MDC_properties>div:nth-child(3) {
+            margin-top: 48%;
+        }
+
+        .MDC_properties>div:nth-child(3)>div {
+            text-align: right;
+            width: 23%;
+            margin-left: 73%;
+            padding: 0.1em;
+            margin-bottom: 0.5em;
+            line-height: 0;
+            color: white;
+            border-radius: 3px;
+        }
+
+        .MDC_properties h5 {
+            font-size: 13px;
+            margin-top: 1em;
+        }
+
+        .MDC_properties h3 {
+            margin-top: 0;
+            margin-bottom: 0.7em;
+        }
+
+        .MDC_pointer {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+            opacity: 0.3;
+            position: absolute;
+            background: linear-gradient(to top, #000 0%, #fff 40%, #000 100%);
+        }
+
+        .MDC_pointer:hover {
+            border: 0.3px solid #ff8000;
+            background: linear-gradient(to bottom, #000 100%, #fff 100%)
+        }
+
+        /*------------------------------------------------------------- Inspiration Trip, CSS -----------------------------------------------------*/
+        #inspiration_trip {
+            height: 45em;
+            margin: 0 14%;
+        }
+
+        #inspiration_trip>h1 {
+            font-size: 28px;
+        }
+
+        .inspiration_blocks {
+            width: 100%;
+            height: 45.5%;
+            display: flex;
+        }
+
+        .inspiration_article {
+            width: 100%;
+            height: 45%;
+            margin-top: 1em;
+            display: flex;
+        }
+
+        .inspiration_blocks>a,
+        .inspiration_article>a {
+            flex: 1;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .inspiration_blocks>a:nth-child(2) {
+            margin: 0 1.5%;
+        }
+
+        .inspiration_blocks>a>div,
+        .inspiration_article>a>div {
+            height: 100%;
+            border-radius: 4px;
+            background-position: 50% 50%;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .inspiration_blocks>a>div>div,
+        .inspiration_article>a>div>div {
+            width: 92%;
+            bottom: 0;
+            font-weight: bold;
+            position: absolute;
+            vertical-align: bottom;
+        }
+
+        .inspiration_text {
+            line-height: 20px;
+            border-radius: 4px;
+            padding: 10% 4% 0 4%;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 12%, #000 99%);
+        }
+
+        .inspiration_article>a:nth-child(1) {
+            margin: 0 1.5% 0 0;
+        }
+
+        /*---------------------------------------------------------------------------------- Explore India ----------------------------------------------------------------------*/
+        #exploreheading {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 16px;
+            display: block;
+            margin-left: 3%;
+            color: #333;
+        }
+
+        .carousel a>div:nth-child(1)>img {
+            width: 210px;
+            height: 210px;
+        }
+
+        .carousel li>a>div:nth-child(2)>h3 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        #exploreheading+h3 {
+            color: #6b6b6b;
+            margin-left: 3%;
+            font-weight: lighter;
+            margin-top: -10px;
+
+        }
+
+        .carousel li>a>div:nth-child(2)>p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #6b6b6b;
+            display: block;
+            margin-top: -15px;
+        }
+
+        #ExploreIndia {
+            margin-left: 11.5%;
+        }
+
+        #lastsection {
+            margin-left: 11.5%;
+        }
+
+        .outerblock {
+            position: relative;
+        }
+
+        .card_header {
+            position: absolute;
+            margin-top: -80px;
+            margin-left: 20px;
+        }
+
+        .outerblock>a>img {
+            width: 260px;
+        }
+
+        .card_header>p {
+            margin-top: -15px;
+        }
+
+        .card_title {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: white;
+        }
+
+        .card_subtitle {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .links {
+            text-decoration: underline;
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+
+        a:link {
+            color: #0071c2;
+        }
+
+        /*---------------------------------------------------------------------------- Discover, CSS -----------------------------------------------------------------------*/
+
+        #t_dis {
+            float: left;
+            padding-left: 3.5em;
+        }
+
+        #t_dis_btn {
+            float: right;
+            width: 100vw;
+            text-align: right;
+            margin-right: 130px;
+        }
+
+        #t_dis_btn0 {
+            margin: 4px;
+            height: 25px;
+            width: 25px;
+            color: white;
+            border: unset;
+            background-color: grey;
+        }
+
+        #t_dis_btn0:hover {
+            background-color: rgb(0, 0, 255);
+        }
+
+        #t_dis_usa1 {
+            margin-left: 3em;
+            background-image: url("https://www.planetware.com/photos-large/USNY/usa-best-places-new-york.jpg");
+        }
+
+        #t_dis_usa2 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwP72udXhadoC45fH_QxdDiBse-TbtBWt3nQ&usqp=CAU");
+        }
+
+        #t_dis_usa3 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTss3zIAgbicdSFkD8Wh6LvCXzMf6N2luAsCA&usqp=CAU");
+        }
+
+        #t_dis_usa4 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYxM0Cj4Xplcdzd-gJA6zvGLVE-VvN7FicQ&usqp=CAU");
+        }
+
+        #t_dis_usa5 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8chu3ll2ZqMpzHnyT-1-BFnwKgxSfjaDy8Q&usqp=CAU");
+        }
+
+        #t_dis_usa1,
+        #t_dis_usa2,
+        #t_dis_usa3,
+        #t_dis_usa4,
+        #t_dis_usa5 {
+            float: left;
+            height: 130px;
+            width: 205px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        #t_dis_usa1+p,
+        #t_dis_usa2+p,
+        #t_dis_usa3+p,
+        #t_dis_usa4+p,
+        #t_dis_usa5+p {
+            margin-left: 5em;
+            float: left;
+            clear: both;
+        }
+
+        #t_usa_hov1,
+        #t_usa_hov2,
+        #t_usa_hov3,
+        #t_usa_hov4,
+        #t_usa_hov5 {
+            padding: 4px;
+            overflow: hidden;
+            height: 17px;
+            font-size: 16px;
+            background-Color: rgba(0, 0, 0, 0.6);
+        }
+
+        #t_usa_hov1:hover,
+        #t_usa_hov2:hover,
+        #t_usa_hov3:hover,
+        #t_usa_hov4:hover,
+        #t_usa_hov5:hover {
+            height: 95%;
+        }
+
+        #t_dis_usa {
+            float: left;
+            margin: 10px;
+        }
+
+        #t_country_name {
+            color: rgb(8, 110, 194);
+        }
+
+        #t_country_name:hover {
+            color: rgb(212, 176, 12);
+        }
+
+        /*---------------------------------------------------------------- Footer, CSS --------------------------------------------------------------*/
+        #footer {
+            height: 20em;
+            margin-top: -10em;
+            text-align: center;
+            line-height: 10px;
+            margin-left: -100px;
+        }
+
+        #footer>div:nth-child(1) {
+            height: 60%;
+            padding: 2% 0 0;
+            color: white;
+            background-color: #00224f;
+        }
+
+        #footer>div:nth-child(1) h3 {
+            color: #bdbdbd;
+        }
+
+        .footer_checkbox {
+            display: flex;
+            margin: 0.4% 30.5% 0;
+        }
+
+        .footer_checkbox>input {
+            margin-top: -0.1em;
+        }
+
+        .subscription_form {
+            height: 3em;
+            margin: 2% 30% 0;
+            display: flex;
+        }
+
+        .subscription_form>div {
+            width: 70%;
+            height: 86%;
+            padding: 0 1.5%;
+        }
+
+        .subscription_form>div>input {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            border-radius: 4px;
+            border: 1px solid black;
+        }
+
+        .subscription_form>button {
+            width: 25%;
+            height: 95%;
+            font-size: 20px;
+            font-weight: 100;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            background-color: #0071c2;
+        }
+
+        .footer_bottom {
+            height: 20%;
+            padding: 1em 0;
+            background-color: #003580;
+        }
+
+        .footer_bottom>div:nth-child(1) {
+            padding: 6px 0 10px;
+        }
+
+        .footer_bottom>div:nth-child(1)>a {
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .footer_bottom>div:nth-child(1)>a:hover {
+            background-color: #4a7ec780;
+        }
+
+        .footer_bottom>div:nth-child(3)>a {
+            color: white;
+            margin: 0 0.5%;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 15px 10px;
+        }
+
+        #footer_lists {
+            margin: 0 12%;
+            display: flex;
+        }
+
+        #footer_lists>div {
+            flex: 1;
+        }
+
+        #footer_lists>div>ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+
+        #footer_lists a {
+            text-decoration: none;
+            color: #0071c2;
+        }
+
+        #footer_lists a:hover,
+        .footer_quote a:hover,
+        .footer_login a:hover {
+            color: rgb(221, 103, 19);
+        }
+
+        .footer_quote,
+        .footer_copyright,
+        .footer_priceline_title {
+            margin: 0 15%;
+            font-size: 12px !important;
+        }
+
+        .footer_quote a {
+            color: #0071c2;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .footer_login {
+            text-align: center;
+        }
+
+        .footer_login>a {
+            text-decoration: none;
+            color: #333;
+            opacity: 80%;
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+
+        .footer_priceline_title {
+            text-align: center;
+        }
+
+        .footer_priceline_images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5em;
+        }
+
+        .footer_priceline_images>div {
+            margin-right: 2.5em;
+        }
+
+        h2 {
+            margin-top: 150px;
+        }
+
+        /* Footer Media queries */
+        @media only screen and (max-width: 800px) {
+            body {
+                margin: 0;
+            }
+
+            #footer {
+                width: 100%;
+                height: 16em;
+                text-align: center;
+                line-height: 10px;
+                margin-top: 200px;
+            }
+
+            #footer>div:nth-child(1) {
+                height: 60%;
+                padding: 2% 0 0;
+                color: white;
+                background-color: #00224f;
+            }
+
+            #footer>div:nth-child(1)>div {
+                font-size: 14px;
+                font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            #footer>div:nth-child(1) h3 {
+                color: #bdbdbd;
+            }
+
+            .footer_checkbox {
+                width: 50%;
+                font-size: 10px;
+                display: flex;
+            }
+
+            .footer_checkbox>input {
+                width: 0.8em;
+                height: 0.8em;
+            }
+
+            .subscription_form {
+                width: 50%;
+                height: 2.5em;
+                margin-left: 10em;
+                display: flex;
+            }
+
+            .subscription_form>div {
+                width: 60%;
+                height: 86%;
+            }
+
+            .subscription_form>div>input {
+                width: 100%;
+                height: 100%;
+                font-size: 13px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+
+            .subscription_form>button {
+                width: 35%;
+                height: 95%;
+                margin-left: 0.25em;
+                font-size: 13px;
+                font-weight: 100;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                background-color: #0071c2;
+            }
+
+            .footer_bottom>div:nth-child(1)>a {
+                border: 1px solid white;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+
+            .footer_bottom>div:nth-child(1)>a:hover {
+                background-color: #4a7ec780;
+            }
+
+            .footer_bottom>div:nth-child(3)>a {
+                color: white;
+                font-size: 8px;
+                font-weight: bold;
+                padding: 0;
+            }
+
+            #footer_lists {
+                margin: 2% 0 0;
+                display: flex;
+            }
+
+            #footer_lists>div {
+                flex: 1;
+            }
+
+            #footer_lists>div>ul {
+                list-style: none;
+                padding-left: 10px;
+                font-size: 8px;
+                line-height: 1.8em;
+            }
+
+            #footer_lists a {
+                text-decoration: none;
+                color: #0071c2;
+            }
+
+            #footer_lists a:hover,
+            .footer_quote a:hover,
+            .footer_login a:hover {
+                color: rgb(221, 103, 19);
+            }
+
+            .footer_quote {
+                margin: 0 3%;
+                font-size: 11px !important;
+                font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            .footer_quote a {
+                color: #0071c2;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .footer_login {
+                text-align: center;
+            }
+
+            .footer_login>a {
+                text-decoration: none;
+                color: #333;
+                opacity: 80%;
+                font-size: 14.5px;
+                font-weight: 700;
+            }
+
+            .footer_copyright {
+                font-size: 6px !important;
+            }
+
+            .footer_copyright p {
+                margin-left: -18%;
+            }
+
+            .footer_priceline_title {
+                text-align: center;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .footer_priceline_title>div {
+                font-size: 12px;
+            }
+
+            .footer_priceline_images {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1.5em;
+            }
+
+            .footer_priceline_images>div {
+                margin: 0 0 0 3%;
+            }
+
+            .footer_priceline_images img {
+                width: 70%;
+            }
+
+            .footer_quote+p,
+            .footer_login+p {
+                display: none;
+            }
+        }
+
+        .bg-modal,
+        .bg-modal2 {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .modal-content,
+        .modal-content2 {
+            width: 300px;
+            height: 350px;
+            background-color: white;
+            border-radius: 4px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .modal-content h2,
+        .modal-content2 h2 {
+            color: #004586;
+        }
+
+        .bg-modal input,
+        .bg-modal2 img {
+            display: block;
+            width: 40%;
+            margin: 20px auto;
+        }
+
+        .close,
+        .close2 {
+            position: absolute;
+            top: 0;
+            right: 18px;
+            font-size: 20px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }

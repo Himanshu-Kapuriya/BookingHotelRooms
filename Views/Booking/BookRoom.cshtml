@@ -1,0 +1,78 @@
+﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+@model BookingDetailsViewModel
+
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="~/css/booking.css" rel="stylesheet" />
+}
+
+<form method="post">
+    <div class="row" style="justify-items:center">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img" src="~/images/pexels-pixabay-164595.jpg" />
+                </div>
+                <div class="card-footer">
+                    <div style="display:inline-flex">
+                        <h5 class="mr-2">Room number: @Model.RoomNumber</h5>
+                        <input type="hidden" asp-for="RoomNumber" />
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price"> Price per day: </label>
+                <span style="color:forestgreen">@Model.Price$</span>
+                <input type="hidden" asp-for="Price" />
+            </div>
+        </div>
+        <div class="col-6 offset-2">
+            <input asp-for="CheckIn" type="hidden" />
+            <input asp-for="CheckOut" type="hidden" />
+            <input class="flatpickr flatpickr-input active form-control" type="text" placeholder="Select Date.." readonly="readonly">
+            <button type="submit" class="btn btn-outline-success mt-3">Proceed</button>
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+    </div>
+    <div>
+        <p style="font-size:larger">
+            <b>Description: </b> @Model.Description
+            <input type="hidden" asp-for="Description" />
+        </p>
+    </div>
+    @for (int i = 0; i < Model.RoomBookings.Count; i++)
+    {
+        <input asp-for="RoomBookings[i].From" type="hidden" />
+        <input asp-for="RoomBookings[i].To" type="hidden" />
+    }
+</form>
+
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        var disabledDates = @Html.Raw(Json.Serialize(Model.RoomBookings));
+        $(document).ready(function () {
+
+            $('.flatpickr').flatpickr({
+                dateFormat: "Y-m-d",
+                timezone: "Europe/London",
+                minDate: "today",
+                disable: disabledDates, // Pass the list of disabled dates
+                mode: "range",
+                onChange: function (selectedDates, dateStr, instance) {
+                    // Your onChange event handler
+                },
+                onClose: function (selectedDates, dateStr, instance) {
+                    $('#CheckIn').val(selectedDates[0].toISOString());
+                    $('#CheckOut').val(selectedDates[1].toISOString());
+                },
+            });
+        });
+    </script>
+
+
+    @await Html.PartialAsync("/Views/Shared/_ValidationScriptsPartial.cshtml")
+}

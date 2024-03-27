@@ -1,0 +1,31 @@
+﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    @foreach (var room in Model)
+    {
+        <div class="col-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <a asp-controller="Booking" asp-action="BookRoom" asp-route-roomId="@room.RoomId">
+                        <img class="card-img" src="~/images/pexels-pixabay-164595.jpg" />
+                    </a>
+                </div>
+                <div class="card-footer">
+                    <div style="display:inline-flex">
+                        <h5 class="mr-2">Room number @room.RoomNumber</h5>
+                        <p style="color: limegreen; align-content:center">@room.Price$</p>
+                    </div>
+                    <br />
+                    <a class="btn btn-dark" asp-controller="Booking" asp-action="BookRoom" asp-route-roomId="@room.RoomId">Details</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+
+                        <a class="btn btn-dark" asp-controller="Rooms" asp-action="EditRoom" asp-route-id="@room.RoomId">Edit</a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,191 @@
+body {
+    margin: 0px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+
+
+/*--------------------------------------------------------------------------- Landing Page covid info, CSS ----------------------------------------------------------------------*/
+
+.landing_covidInfo, .landing_covidInfo_list_active {
+    background-color: #ffe08a30;
+}
+
+    .landing_covidInfo > div {
+        margin: 0 14%;
+        height: 100%;
+    }
+
+.landing_covidInfo_list {
+    width: 100%;
+    height: 100%;
+}
+
+.landing_covidInfo_accordion > div {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.landing_covidInfo_accordion {
+    padding: 10px 18px 0 0;
+    width: 100%;
+    font-size: 15px !important;
+    font-weight: 700;
+    transition: 0.4s;
+    display: flex;
+    border: 1px solid whitesmoke;
+    text-align: left;
+    outline: none;
+    color: #444;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+    .landing_covidInfo_accordion:hover {
+        background-color: white;
+    }
+
+.landing_covidInfo_panel {
+    width: 100%;
+    font-size: 15px !important;
+    display: none;
+    overflow: hidden;
+}
+
+    .landing_covidInfo_panel > a {
+        text-decoration: none;
+        color: #0071c2;
+        font-weight: 900;
+    }
+
+        .landing_covidInfo_panel > a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+#t_goa_float {
+    margin-top: -8%;
+    float: left;
+}
+
+#t_goa_top {
+    display: flex;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.goaTop {
+    border: 1px solid #0071c2;
+    height: 20px;
+    padding: 7px;
+    flex: 1;
+    font-size: 13px;
+    text-align: center;
+    color: #0071c2;
+}
+
+#t_goa_itc1 {
+    float: left;
+    margin: 20px;
+}
+
+#t_goa_itc_img {
+    float: left;
+    margin: 20px
+}
+
+#t_goa_good {
+    padding: 20px;
+}
+
+#t_goa_good1 {
+    height: 30px;
+    background-color: rgb(9, 71, 243);
+    color: white;
+    border: unset;
+}
+
+#t_goa_itc {
+    margin: 20px 20px;
+    width: 940px;
+    height: 250px;
+    border: 1px solid#c6c6c6;
+}
+
+#t_goa_itc1 > h2 {
+    color: #0071c2;
+}
+
+.fa-star, .fa-thumbs-up {
+    color: yellow;
+}
+
+#t_goa_good > button {
+    height: 25px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    border: unset;
+    color: white;
+    background-color: rgb(8, 58, 223);
+}
+
+#t_goa_top1 {
+    background-color: rgb(4, 117, 4);
+    color: white;
+}
+
+#t_goa_book {
+    color: rgb(240, 11, 11);
+}
+
+#t_goa_sea {
+    float: left;
+    width: 200px;
+    border-radius: 5px;
+    color: #333;
+    background-color: rgb(252, 195, 8);
+    margin-top: -6%;
+    margin-left: 11%;
+    padding: 20px;
+    line-height: 0;
+}
+
+    #t_goa_sea p {
+        font-size: 13px;
+    }
+
+    #t_goa_sea input {
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    #t_goa_sea button {
+        width: 100%;
+        height: 45px;
+        font-size: 17px;
+        border-radius: 3px;
+        color: white;
+        border: unset;
+        cursor: pointer;
+        background-color: #0071c2;
+    }
+
+        #t_goa_sea button:hover {
+            background-color: #0f3079;
+        }
+
+#t_goa > h1 {
+    margin: 20px;
+}
+
+#t_goa_good > button {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}

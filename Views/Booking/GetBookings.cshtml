@@ -1,0 +1,56 @@
+﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+@model IEnumerable<IGrouping<string, Booking>>
+
+
+
+
+<div class="row">
+    <div class="col-8 offset-2">
+        @foreach (var key in Model)
+        {
+            @if (User.IsInRole("Admin"))
+            {
+                <h1 class="offset-5">@key.Key</h1>
+            }
+            else
+            {
+                <h1 class="offset-5">Your Orders</h1>
+            }
+
+            @foreach (var booking in key)
+            {
+                @if (booking.BookingStatus == Status.Completed)
+                {
+                    <div class="card m-3">
+                        <div class="card-header">
+                            <label><b>Booking ID:</b> @booking.BookingId</label>
+                        </div>
+                        <div class="card-body" style="display:inline-flex">
+                            <div class="row">
+                                <div class="col-7">
+                                    <img class="card-img" src="~/images/pexels-pixabay-164595.jpg" />
+                                </div>
+                                <div class="col-5">
+                                    <p>
+                                        <b>Room Number:</b> @booking.Room.RoomNumber
+                                    <p>
+                                        <b>From:</b> @booking.CheckIn
+                                    </p>
+                                    <p>
+                                        <b>To:</b> @booking.CheckOut
+                                    </p>
+                                    <p>
+                                        <b>Total Price:</b> @booking.TotalPrice$
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <label><b>Order date: </b>@booking.OrderDate</label>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>

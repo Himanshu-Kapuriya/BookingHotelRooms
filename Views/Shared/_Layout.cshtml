@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]BookingHotelRooms</title>
+    <link href="~/css/about.css" rel="stylesheet" />
+    <link href="~/css/contect.css" rel="stylesheet" />
+    <link href="~/css/123.css" rel="stylesheet" />
+
+   
+    <link href="~/css/mumbai.css" rel="stylesheet" />
+   
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <header>
+        <div id="t_nav">
+            <p id="t_book">Booking Spot</p>
+
+            <div id="t_ind">
+
+
+                @Html.ActionLink("Home", "Index", "Rooms")
+                @Html.ActionLink("About", "About", "Home")
+                @Html.ActionLink("Contact", "Contact", "Home")
+               
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Rooms" asp-action="CreateRoom">Add Room</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="administration" asp-action="roles">Roles</a>
+                    </li>
+                }
+             
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                       // <li class="nav-item" >
+                                    <a  asp-controller="Booking" asp-action="GetBookings">All Bookings</a>
+                               // </li>
+                            }
+                            else
+                            {
+                       // <li class="nav-item" >
+                        <a  asp-controller="Booking" asp-action="GetBookings">Your Bookings</a>
+                               // </li>
+                            }
+                   // <li class="nav-item">
+                                <form method="post" asp-controller="Account" asp-action="Logout" class="mt-2">
+                                    <button type="submit"
+                                            class="nav-link btn btn-link py-0">
+                                        Logout, @User.Identity.Name
+                                    </button>
+                                </form>
+                           // </li>
+                        }
+                else
+                {
+                        <a  asp-controller="account" asp-action="register">
+                            Register
+                        </a>
+                        <a asp-controller="account" asp-action="login">
+                            Login
+                        </a>
+                }
+
+
+
+
+               
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+
+        </div>
+
+
+        <div class="footer_botom" style="background-color: #004586; height: 70px;">
+            <p style="text-align: center; font-size: 30px; color: #f5f5f5;">save time and money</p>
+        </div>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- added modal to landing page -->
+
+    <div class="bg-modal">
+        <div class="modal-content">
+
+            <div class="close">+</div>
+            <img src="https://cdn.worldvectorlogo.com/logos/bookingcom-1.svg"
+                 style="width: 80px; margin-bottom: 50px;" alt="">
+            <h2>Welcome to Booking.com</h2>
+            <form action="">
+                <input type="text" id="fName" placeholder="First Name">
+
+                <input type="text" placeholder="Last Name">
+
+                <button id="dispName">Continue</button>
+            </form>
+        </div>
+    </div>
+    <div class="bg-modal2">
+        <div class="modal-content2">
+
+            <div class="close2">+</div>
+            <h2>Select any image</h2>
+            <img id="manLogo"
+                 src="https://www.pikpng.com/pngl/m/154-1540426_png-file-svg-business-man-logo-png-clipart.png"
+                 style="width: 80px; margin-bottom: 50px;" alt="man">
+            <img id="womanLogo"
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd0ejTB6Nyzu-SEHPr-HgCLjnyGl98k8Un8Q&usqp=CAU"
+                 style="width: 80px; margin-bottom: 50px;" alt="woman">
+
+        </div>
+    </div>
+
+
+
+    
+    <script src="~/js/index.js"></script>
+    <script src="~/js/mumbai.js"></script>
+    <script src="~/js/pune.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
